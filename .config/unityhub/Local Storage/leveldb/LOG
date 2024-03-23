@@ -1,6 +1,0 @@
-2024/03/23-16:16:26.915 4b430 Reusing MANIFEST /root/.config/unityhub/Local Storage/leveldb/MANIFEST-000001
-2024/03/23-16:16:26.916 4b430 Recovering log #3
-2024/03/23-16:16:27.215 4b430 Reusing old log /root/.config/unityhub/Local Storage/leveldb/000003.log 
-2024/03/23-16:50:02.016 578e7 Level-0 table #5: started
-2024/03/23-16:50:02.019 578e7 Level-0 table #5: 16475 bytes OK
-2024/03/23-16:50:02.022 578e7 Delete type=0 #3
