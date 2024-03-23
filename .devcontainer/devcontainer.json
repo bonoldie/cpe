@@ -1,0 +1,39 @@
+// see: https://github.com/devcontainers/templates/tree/main/src/dotnet
+{
+	"name": "CPE devcontainer",
+	"image": "mcr.microsoft.com/devcontainers/dotnet:1-8.0",
+
+	"features": {
+		"ghcr.io/devcontainers/features/git:1": {},
+		"ghcr.io/devcontainers-contrib/features/curl-apt-get:1": {},
+		"ghcr.io/wxw-matt/devcontainer-features/command_runner:0": {}
+	},
+
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	// "forwardPorts": [5000, 5001],
+	// "portsAttributes": {
+	//		"5001": {
+	//			"protocol": "https"
+	//		}
+	// }
+
+	"postCreateCommand": "dotnet restore",
+
+	"customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-dotnettools.csdevkit",
+                "ms-dotnettools.csharp",
+				"logerfo.sln-support",
+                "Fudge.auto-using",
+                "donjayamanne.githistory",
+                "eamodio.gitlens"
+            ],
+			"settings": {
+				"csharp.semanticHighlighting.enabled": true
+			}
+        }
+    },
+	
+	"remoteUser": "root"
+}
