@@ -39,7 +39,6 @@ namespace CPE.Utils
 
         private string _data;
 
-
         public Ply(String Data, List<(PropertyType pType, string pValue)> Properties, (ElementType eType, string eValue) Element, FormatType Format)
         {
             Header = new PlyHeader

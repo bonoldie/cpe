@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.IO;
 using CPE.Utils;
 
@@ -9,7 +10,9 @@ namespace CPE.Zephyr
 
         string PlyFilePath;
 
-        Ply ply;
+        public Ply ply;
+
+        Dictionary<string, Visibility> visibilityMaps;
 
         public PointCloud()
         {
