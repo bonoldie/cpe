@@ -1,0 +1,14 @@
+FROM mcr.microsoft.com/devcontainers/dotnet:1-8.0
+
+apt-get update
+apt-get install -y wget curl build-essential libpng-dev libtiff-dev libjpeg-dev
+ln -s /usr/lib/x86_64-linux-gnu/libtiff.so.6 /usr/lib/x86_64-linux-gnu/libtiff.so.5
+
+cd /tmp
+wget https://imagemagick.org/archive/ImageMagick-7.1.1-29.zip
+unzip ImageMagick-7.1.1-29.zip
+cd ImageMagick-7.1.1-29
+./configure 
+make -j8
+sudo make install
+
