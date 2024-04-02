@@ -69,4 +69,20 @@ public class CPE_Tests
         
         Assert.Throws<FileNotFoundException>(() => pc.LoadPlyFromFile("ply/NotExists.ply"));
     }
+
+    [Fact]
+    public void Test_Visibility()
+    {
+
+        Visibility vis = new Visibility();
+
+        vis.LoadVisibilityFromFile("vis/Visibility.txt");
+        
+        VisibilityMap visMap = vis.GetVisibilityMapByCameraName("_SAM1002.JPG");
+        
+        Assert.Throws<FileNotFoundException>(() => vis.LoadVisibilityFromFile("vis/NotExists.ply"));
+
+        Assert.NotNull(visMap);
+        Assert.Equal(3894, visMap.Data.GetLength(0));
+    }
 }

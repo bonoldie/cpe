@@ -1,16 +1,36 @@
-namespace CPE.Zephyr {
-    public class Visibility {   
+using System;
+using System.Collections.Generic;
+using System.IO;
+using CPE.Utils;
 
-        public Visibility(){
-            
+namespace CPE.Zephyr
+{
+    public class Visibility
+    {
+
+        string VisibilityFilePath;
+
+        public VisibilityFile visibilityFile;
+
+        public Visibility()
+        {
+
         }
 
-        // TODO: implement visibility file parsing(close to the ply parsing but without header) :)
-
-        Visibility Parse(string VisibilityFileContent) {
-            Visibility vis = new Visibility();
-
-            return vis;
+        public VisibilityMap GetVisibilityMapByCameraName(string CameraName) {
+            return visibilityFile.VisibilityMaps[CameraName];
         }
+        
+        /// <summary>
+        /// Method <c>LoadVisibilityFromFile</c> loads the Zephyr point cloud
+        /// </summary>
+        public void LoadVisibilityFromFile(string _VisibilityFilePath)
+        {
+            VisibilityFilePath = _VisibilityFilePath;
+
+            visibilityFile = VisibilityFile.Parse(File.ReadAllText(_VisibilityFilePath));
+        }
+
+        // TODO: overload LoadVisibilityFromFile function with StreamReader
     }
 }
