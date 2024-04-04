@@ -1,0 +1,12 @@
+<root>
+  <File Object="/workspaces/cpe/projects/vlfeat-0.9.21/obj/x86/Debug/test_mathop_abs.o">src/test_mathop_abs.c;/workspaces/cpe/projects/vlfeat-0.9.21/vlfeat.vcxproj</File>
+  <File Object="/workspaces/cpe/projects/vlfeat-0.9.21/obj/x86/Debug/mser.o">src/mser.c;src/generic-driver.h;/workspaces/cpe/projects/vlfeat-0.9.21/vlfeat.vcxproj</File>
+  <File Object="/workspaces/cpe/projects/vlfeat-0.9.21/obj/x86/Debug/aib.o">src/aib.c;/workspaces/cpe/projects/vlfeat-0.9.21/vlfeat.vcxproj</File>
+  <File Object="/workspaces/cpe/projects/vlfeat-0.9.21/obj/x86/Debug/test_host.o">src/test_host.c;/workspaces/cpe/projects/vlfeat-0.9.21/vlfeat.vcxproj</File>
+  <File Object="/workspaces/cpe/projects/vlfeat-0.9.21/obj/x86/Debug/test_heap-t.o">src/test_heap-t.c;/workspaces/cpe/projects/vlfeat-0.9.21/vlfeat.vcxproj</File>
+  <File Object="/workspaces/cpe/projects/vlfeat-0.9.21/obj/x86/Debug/sift.o">src/sift.c;src/generic-driver.h;/workspaces/cpe/projects/vlfeat-0.9.21/vlfeat.vcxproj</File>
+  <File Object="/workspaces/cpe/projects/vlfeat-0.9.21/obj/x86/Debug/test_heap.o">src/test_heap.c;/workspaces/cpe/projects/vlfeat-0.9.21/vlfeat.vcxproj</File>
+  <File Object="/workspaces/cpe/projects/vlfeat-0.9.21/obj/x86/Debug/test_getopt_long.o">src/test_getopt_long.c;/workspaces/cpe/projects/vlfeat-0.9.21/vlfeat.vcxproj</File>
+  <File Object="/workspaces/cpe/projects/vlfeat-0.9.21/obj/x86/Debug/test_mathop.o">src/test_mathop.c;src/test_mathop_fast_resqrt.tc;src/test_mathop_fast_sqrt_ui.tc;/workspaces/cpe/projects/vlfeat-0.9.21/vlfeat.vcxproj</File>
+  <File Object="/workspaces/cpe/projects/vlfeat-0.9.21/obj/x86/Debug/test_imopv.o">src/test_imopv.c;/workspaces/cpe/projects/vlfeat-0.9.21/vlfeat.vcxproj</File>
+</root>

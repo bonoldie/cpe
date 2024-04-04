@@ -11,13 +11,14 @@
    <ItemGroup>
     <Content Include=".\Zephyr\**\*.cs" />
     <Content Include=".\Base\**\*.cs" />
+    <Content Include=".\Utils\**\*.cs" />
   </ItemGroup>
 
    <ItemGroup>
+     <PackageReference Include="MathNet.Numerics" Version="5.0.0" />
+     <PackageReference Include="MathNet.Numerics.Data.Matlab" Version="5.0.0" />
+     <PackageReference Include="MathNet.Numerics.Data.Text" Version="5.0.0" />
      <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
      <PackageReference Include="NLog" Version="5.2.8" />
    </ItemGroup>
-
-
-  
 </Project>

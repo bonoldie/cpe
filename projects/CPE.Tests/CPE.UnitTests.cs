@@ -1,6 +1,10 @@
 using CPE.Zephyr;
 using Xunit.Abstractions;
 using CPE.Utils;
+using CPE.CV;
+using MathNet.Numerics.LinearAlgebra;
+using MathNet.Numerics.Data.Text;
+using MathNet.Numerics.Data.Matlab;
 
 namespace CPE.UnitTests;
 
@@ -51,12 +55,12 @@ public class CPE_Tests
 
         Ply ply = Ply.Parse(plyFile);
 
-        double [] x = ply.getDoublePropertyArray("x");
-        ushort [] r = ply.getUCharPropertyArray("red");
+        var x = ply.GetDoubleVector("x");
+        var r = ply.GetUCharVector("red");
 
         Assert.True(ply.Header.Properties.Count == 6,"Header parsing error(properties)");
         Assert.True(ply.Header.Properties.FindIndex(prop => prop.PType == PropertyType.Unknown) < 0, "Unkown properties in header");
-        Assert.True(r.Length == int.Parse(ply.Header.Element.EValue) && x.Length == int.Parse(ply.Header.Element.EValue), "Vertices number mismatch");
+        Assert.True(r.Count == int.Parse(ply.Header.Element.EValue) && x.Count == int.Parse(ply.Header.Element.EValue), "Vertices number mismatch");
     }
 
     [Fact]
@@ -84,5 +88,28 @@ public class CPE_Tests
 
         Assert.NotNull(visMap);
         Assert.Equal(3894, visMap.Data.GetLength(0));
+    }
+
+    [Fact]
+    public void Test_Features2D()
+    {   
+        
+    }
+
+    [Fact]
+    public void Test_PoseEstimation()
+    {       
+        PoseEstimation pe = new PoseEstimation();
+
+   
+        Matrix<double> Points2D = DelimitedReader.Read<double>("mat/points2D.csv", false, ",");
+        Matrix<double> Points3D = DelimitedReader.Read<double>("mat/points3D.csv", false, ",");
+        Matrix<double> K = DelimitedReader.Read<double>("mat/K.csv", false, ",");
+        //
+        //Matrix<double> Points3D = DelimitedReader.Read<double>("csv/points3D.csv",false,",",false);
+    //
+        //Matrix<double> K = DelimitedReader.Read<double>("csv/k.csv",false,",",false);
+
+        pe.estimatePose(Points2D.SubMatrix(0,100,0,Points2D.ColumnCount), Points3D.SubMatrix(0,100,0,Points3D.ColumnCount), K);
     }
 }

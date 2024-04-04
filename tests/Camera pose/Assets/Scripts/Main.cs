@@ -11,7 +11,7 @@ public class Main : MonoBehaviour
         PointCloud pc = new PointCloud();
 
         pc.LoadPlyFromFile("Assets/Ply/SamPointCloud.ply");
-        Debug.Log(pc.ply.getDoublePropertyArray("x").Length);
+        Debug.Log(pc.ply.GetDoubleVector("x").Count);
     }
 
     // Update is called once per frame

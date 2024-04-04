@@ -1,0 +1,29 @@
+<root>
+  <File Object="/workspaces/cpe/projects/vlfeat-0.9.21/obj/x86/LinuxDebug/vl_imwbackwardmx.o">toolbox/imop/vl_imwbackwardmx.c;/workspaces/cpe/projects/vlfeat-0.9.21/vlfeat.vcxproj</File>
+  <File Object="/workspaces/cpe/projects/vlfeat-0.9.21/obj/x86/LinuxDebug/test_mathop.o">src/test_mathop.c;src/test_mathop_fast_resqrt.tc;src/test_mathop_fast_sqrt_ui.tc;/workspaces/cpe/projects/vlfeat-0.9.21/vlfeat.vcxproj</File>
+  <File Object="/workspaces/cpe/projects/vlfeat-0.9.21/obj/x86/LinuxDebug/vl_hikmeans.o">toolbox/kmeans/vl_hikmeans.c;/workspaces/cpe/projects/vlfeat-0.9.21/vlfeat.vcxproj</File>
+  <File Object="/workspaces/cpe/projects/vlfeat-0.9.21/obj/x86/LinuxDebug/sift.o">src/sift.c;src/generic-driver.h;/workspaces/cpe/projects/vlfeat-0.9.21/vlfeat.vcxproj</File>
+  <File Object="/workspaces/cpe/projects/vlfeat-0.9.21/obj/x86/LinuxDebug/vl_hikmeanspush.o">toolbox/kmeans/vl_hikmeanspush.c;/workspaces/cpe/projects/vlfeat-0.9.21/vlfeat.vcxproj</File>
+  <File Object="/workspaces/cpe/projects/vlfeat-0.9.21/obj/x86/LinuxDebug/vl_imsmooth.o">toolbox/imop/vl_imsmooth.c;/workspaces/cpe/projects/vlfeat-0.9.21/vlfeat.vcxproj</File>
+  <File Object="/workspaces/cpe/projects/vlfeat-0.9.21/obj/x86/LinuxDebug/test_vec_comp.o">src/test_vec_comp.c;/workspaces/cpe/projects/vlfeat-0.9.21/vlfeat.vcxproj</File>
+  <File Object="/workspaces/cpe/projects/vlfeat-0.9.21/obj/x86/LinuxDebug/vl_tpsumx.o">toolbox/imop/vl_tpsumx.c;/workspaces/cpe/projects/vlfeat-0.9.21/vlfeat.vcxproj</File>
+  <File Object="/workspaces/cpe/projects/vlfeat-0.9.21/obj/x86/LinuxDebug/vl_imdisttf.o">toolbox/imop/vl_imdisttf.c;/workspaces/cpe/projects/vlfeat-0.9.21/vlfeat.vcxproj</File>
+  <File Object="/workspaces/cpe/projects/vlfeat-0.9.21/obj/x86/LinuxDebug/vl_rodr.o">toolbox/geometry/vl_rodr.c;/workspaces/cpe/projects/vlfeat-0.9.21/vlfeat.vcxproj</File>
+  <File Object="/workspaces/cpe/projects/vlfeat-0.9.21/obj/x86/LinuxDebug/aib.o">src/aib.c;/workspaces/cpe/projects/vlfeat-0.9.21/vlfeat.vcxproj</File>
+  <File Object="/workspaces/cpe/projects/vlfeat-0.9.21/obj/x86/LinuxDebug/test_stringop.o">src/test_stringop.c;src/check.h;/workspaces/cpe/projects/vlfeat-0.9.21/vlfeat.vcxproj</File>
+  <File Object="/workspaces/cpe/projects/vlfeat-0.9.21/obj/x86/LinuxDebug/mser.o">src/mser.c;src/generic-driver.h;/workspaces/cpe/projects/vlfeat-0.9.21/vlfeat.vcxproj</File>
+  <File Object="/workspaces/cpe/projects/vlfeat-0.9.21/obj/x86/LinuxDebug/test_imopv.o">src/test_imopv.c;/workspaces/cpe/projects/vlfeat-0.9.21/vlfeat.vcxproj</File>
+  <File Object="/workspaces/cpe/projects/vlfeat-0.9.21/obj/x86/LinuxDebug/test_nan.o">src/test_nan.c;/workspaces/cpe/projects/vlfeat-0.9.21/vlfeat.vcxproj</File>
+  <File Object="/workspaces/cpe/projects/vlfeat-0.9.21/obj/x86/LinuxDebug/test_heap-t.o">src/test_heap-t.c;/workspaces/cpe/projects/vlfeat-0.9.21/vlfeat.vcxproj</File>
+  <File Object="/workspaces/cpe/projects/vlfeat-0.9.21/obj/x86/LinuxDebug/vl_aib.o">toolbox/aib/vl_aib.c;/workspaces/cpe/projects/vlfeat-0.9.21/vlfeat.vcxproj</File>
+  <File Object="/workspaces/cpe/projects/vlfeat-0.9.21/obj/x86/LinuxDebug/test_getopt_long.o">src/test_getopt_long.c;/workspaces/cpe/projects/vlfeat-0.9.21/vlfeat.vcxproj</File>
+  <File Object="/workspaces/cpe/projects/vlfeat-0.9.21/obj/x86/LinuxDebug/test_mathop_abs.o">src/test_mathop_abs.c;/workspaces/cpe/projects/vlfeat-0.9.21/vlfeat.vcxproj</File>
+  <File Object="/workspaces/cpe/projects/vlfeat-0.9.21/obj/x86/LinuxDebug/vl_imintegral.o">toolbox/imop/vl_imintegral.c;/workspaces/cpe/projects/vlfeat-0.9.21/vlfeat.vcxproj</File>
+  <File Object="/workspaces/cpe/projects/vlfeat-0.9.21/obj/x86/LinuxDebug/test_host.o">src/test_host.c;/workspaces/cpe/projects/vlfeat-0.9.21/vlfeat.vcxproj</File>
+  <File Object="/workspaces/cpe/projects/vlfeat-0.9.21/obj/x86/LinuxDebug/test_threads.o">src/test_threads.c;/workspaces/cpe/projects/vlfeat-0.9.21/vlfeat.vcxproj</File>
+  <File Object="/workspaces/cpe/projects/vlfeat-0.9.21/obj/x86/LinuxDebug/test_heap.o">src/test_heap.c;/workspaces/cpe/projects/vlfeat-0.9.21/vlfeat.vcxproj</File>
+  <File Object="/workspaces/cpe/projects/vlfeat-0.9.21/obj/x86/LinuxDebug/vl_irodr.o">toolbox/geometry/vl_irodr.c;/workspaces/cpe/projects/vlfeat-0.9.21/vlfeat.vcxproj</File>
+  <File Object="/workspaces/cpe/projects/vlfeat-0.9.21/obj/x86/LinuxDebug/vl_gmm.o">toolbox/gmm/vl_gmm.c;/workspaces/cpe/projects/vlfeat-0.9.21/vlfeat.vcxproj</File>
+  <File Object="/workspaces/cpe/projects/vlfeat-0.9.21/obj/x86/LinuxDebug/vl_aibhist.o">toolbox/aib/vl_aibhist.c;/workspaces/cpe/projects/vlfeat-0.9.21/vlfeat.vcxproj</File>
+  <File Object="/workspaces/cpe/projects/vlfeat-0.9.21/obj/x86/LinuxDebug/test_rand.o">src/test_rand.c;/workspaces/cpe/projects/vlfeat-0.9.21/vlfeat.vcxproj</File>
+</root>

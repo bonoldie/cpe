@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "9LOgJIyly6PwnOPwWRwrDWf87s9cmXYPUo+qlzv8yTLiebyYFOiUHD/rovAi0rzqwJKnFFPXm+G1sPgkK3cxBA==",
+  "success": true,
+  "projectFilePath": "/workspaces/cpe/projects/vlfeat-0.9.21/project.json",
+  "expectedPackageFiles": [
+    "/root/.nuget/packages/gccbuildtargets/1.22.77.8/gccbuildtargets.1.22.77.8.nupkg.sha512"
+  ],
+  "logs": []
+}

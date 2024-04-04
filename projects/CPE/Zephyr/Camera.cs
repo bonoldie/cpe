@@ -30,7 +30,7 @@ namespace CPE.Zephyr
 
     public class Camera
     {
-        private XmlDocument XMP = new XmlDocument();
+        private readonly XmlDocument XMP = new XmlDocument();
 
         public string Name = "";
 

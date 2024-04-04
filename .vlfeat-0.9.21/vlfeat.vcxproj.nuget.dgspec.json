@@ -1,0 +1,47 @@
+{
+  "format": 1,
+  "restore": {
+    "/workspaces/cpe/projects/vlfeat-0.9.21/vlfeat.vcxproj": {}
+  },
+  "projects": {
+    "/workspaces/cpe/projects/vlfeat-0.9.21/vlfeat.vcxproj": {
+      "restore": {
+        "projectUniqueName": "/workspaces/cpe/projects/vlfeat-0.9.21/vlfeat.vcxproj",
+        "projectName": "vlfeat",
+        "projectPath": "/workspaces/cpe/projects/vlfeat-0.9.21/vlfeat.vcxproj",
+        "projectJsonPath": "/workspaces/cpe/projects/vlfeat-0.9.21/project.json",
+        "packagesPath": "/root/.nuget/packages/",
+        "projectStyle": "ProjectJson",
+        "validateRuntimeAssets": true,
+        "configFilePaths": [
+          "/root/.nuget/NuGet/NuGet.Config"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net40": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "dependencies": {
+        "GCCBuildTargets": "[1.*, )"
+      },
+      "frameworks": {
+        "net40": {}
+      },
+      "runtimes": {
+        "win": {
+          "#import": []
+        },
+        "win-x64": {
+          "#import": []
+        },
+        "win-x86": {
+          "#import": []
+        }
+      }
+    }
+  }
+}

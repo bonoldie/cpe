@@ -1,7 +1,12 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Numerics;
 using System.Text.RegularExpressions;
+using MathNet.Numerics.LinearAlgebra;
+using MathNet.Numerics.LinearAlgebra.Double;
+using MathNet.Numerics.Providers.LinearAlgebra;
+using NLog.LayoutRenderers;
 
 namespace CPE.Utils
 {
@@ -37,22 +42,45 @@ namespace CPE.Utils
 
         public PlyHeader Header;
 
-        private string _data;
-
-        public Ply(String Data, List<(PropertyType pType, string pValue)> Properties, (ElementType eType, string eValue) Element, FormatType Format)
+        private Dictionary<(PropertyType PType, string PValue), MathNet.Numerics.LinearAlgebra.Vector<double>> DoubleData = new Dictionary<(PropertyType PType, string PValue),  MathNet.Numerics.LinearAlgebra.Vector<double>>();
+        private Dictionary<(PropertyType PType, string PValue),  MathNet.Numerics.LinearAlgebra.Vector<float>> FloatData = new Dictionary<(PropertyType PType, string PValue),  MathNet.Numerics.LinearAlgebra.Vector<float>>();
+    
+        public Ply(string Data, List<(PropertyType pType, string pValue)> Properties, (ElementType eType, string eValue) Element, FormatType Format)
         {
             Header = new PlyHeader
             {
                 Element = Element,
                 Properties = Properties,
                 Format = Format,
-            };
+            };  
 
-            _data = Data;
+          
+            string[] Rows = Data.Split("\n", StringSplitOptions.RemoveEmptyEntries);
 
+              foreach(var Property in Properties) {
+                if(Property.pType == PropertyType.Double) {
+                    DoubleData[Property] = CreateVector.Dense(new double[Rows.Length]);
+                }
+                if(Property.pType == PropertyType.UChar) {
+                    FloatData[Property] = CreateVector.Dense(new float[Rows.Length]);
+                }
+            }
+
+
+
+            foreach(var Row in Rows.Select((Row, Index) => new {RowValues=Row.Split(" "), RowIndex=Index}) ) {
+                foreach(var RowVal in Row.RowValues.Select((RowValue, RowValueIndex) => new{RowValue,RowValueIndex,RowIndex=Row.RowIndex})){
+                    if(Properties[RowVal.RowValueIndex].pType == PropertyType.Double) {
+
+                        DoubleData[Properties[RowVal.RowValueIndex]][RowVal.RowIndex] = double.Parse(RowVal.RowValue);
+                    } else  if(Properties[RowVal.RowValueIndex].pType == PropertyType.UChar) {
+                        FloatData[Properties[RowVal.RowValueIndex]][RowVal.RowIndex] = float.Parse(RowVal.RowValue);
+                    }
+                }
+            }
         }
 
-        public ushort[] getUCharPropertyArray(string PValue)
+        public MathNet.Numerics.LinearAlgebra.Vector<float> GetUCharVector(string PValue)
         {
             int PropertyIndex = Header.Properties.FindIndex(prop => prop.PValue == PValue && prop.PType == PropertyType.UChar);
 
@@ -61,10 +89,10 @@ namespace CPE.Utils
                 throw new Exception("Property '" + PValue + "' of type 'uchar' not found");
             }
 
-            return _data.Split("\n", StringSplitOptions.RemoveEmptyEntries).Select((row, i) => row.Split(" ")).Aggregate(new List<ushort>(), (list, row) => { list.Add(ushort.Parse(row[PropertyIndex])); return list; }).ToArray();
+            return  FloatData[Header.Properties[PropertyIndex]];
         }
 
-        public double[] getDoublePropertyArray(string PValue)
+        public MathNet.Numerics.LinearAlgebra.Vector<double> GetDoubleVector(string PValue)
         {
             int PropertyIndex = Header.Properties.FindIndex(prop => prop.PValue == PValue && prop.PType == PropertyType.Double);
 
@@ -73,8 +101,7 @@ namespace CPE.Utils
                 throw new Exception("Property '" + PValue + "' of type 'double' not found");
             }
 
-            double[] data = _data.Split("\n", StringSplitOptions.RemoveEmptyEntries).Select((row, i) => row.Split(" ")).Aggregate(new List<double>(), (list, row) => { list.Add(double.Parse(row[PropertyIndex])); return list; }).ToArray();
-            return data;
+              return  DoubleData[Header.Properties[PropertyIndex]];
         }
 
         public static Ply Parse(string PlyFileContent)
