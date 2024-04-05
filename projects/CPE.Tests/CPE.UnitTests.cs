@@ -101,14 +101,9 @@ public class CPE_Tests
     {       
         PoseEstimation pe = new PoseEstimation();
 
-   
         Matrix<double> Points2D = DelimitedReader.Read<double>("mat/points2D.csv", false, ",");
         Matrix<double> Points3D = DelimitedReader.Read<double>("mat/points3D.csv", false, ",");
         Matrix<double> K = DelimitedReader.Read<double>("mat/K.csv", false, ",");
-        //
-        //Matrix<double> Points3D = DelimitedReader.Read<double>("csv/points3D.csv",false,",",false);
-    //
-        //Matrix<double> K = DelimitedReader.Read<double>("csv/k.csv",false,",",false);
 
         pe.estimatePose(Points2D.SubMatrix(0,100,0,Points2D.ColumnCount), Points3D.SubMatrix(0,100,0,Points3D.ColumnCount), K);
     }
