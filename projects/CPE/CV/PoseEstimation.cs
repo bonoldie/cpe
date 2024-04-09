@@ -18,13 +18,13 @@ namespace CPE.CV
 
     public struct Pose
     {
-        Matrix<double> Rotation;
-        MathNet.Numerics.LinearAlgebra.Vector<double> Translation;
+        public Matrix<double> Rotation;
+        public MathNet.Numerics.LinearAlgebra.Vector<double> Translation;
+        public double Scale;
     }
 
     public class PoseEstimation
     {
-
         public PoseEstimationMethods Method = PoseEstimationMethods.Fiore;
 
         public PoseEstimation()
@@ -32,7 +32,7 @@ namespace CPE.CV
 
         }
 
-        public Pose estimatePose(Matrix<double> Points2D, Matrix<double> Points3D, Matrix<double> K)
+        public Pose EstimatePose(Matrix<double> Points2D, Matrix<double> Points3D, Matrix<double> K)
         {
             // Svd(Points2D);
 
@@ -124,11 +124,7 @@ namespace CPE.CV
 
             var  TPos = ((1/s) * XMean) - (RPos * Points3DMean); 
 
-            Logger.NLogger.Info(s.ToString());
-            Logger.NLogger.Info(RPos.ToString());
-            Logger.NLogger.Info(TPos.ToString());
-
-            return new Pose();
+            return new Pose(){Rotation=RPos, Translation=TPos, Scale=s};        
         }
     }
 
