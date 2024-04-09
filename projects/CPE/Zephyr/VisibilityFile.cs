@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.RegularExpressions;
@@ -49,7 +50,7 @@ namespace CPE.Zephyr
                 int[] pointsIndexes = { };
                 VisibilityHeader header = new VisibilityHeader();
 
-                string[] rows = Block.Split("\n", System.StringSplitOptions.RemoveEmptyEntries);
+                string[] rows = Block.Split(Environment.NewLine, StringSplitOptions.RemoveEmptyEntries);
 
                 header.CameraName = rows[0];
                 header.PointsCount = int.Parse(rows[1]);
@@ -57,7 +58,7 @@ namespace CPE.Zephyr
 
                 foreach (var row in rows.Skip(2).Select((value, index) => new { value, index }))
                 {
-                    string[] rowElements = row.value.Split(" ", System.StringSplitOptions.RemoveEmptyEntries);
+                    string[] rowElements = row.value.Split(" ", StringSplitOptions.RemoveEmptyEntries);
                     pointsIndexes.Append(int.Parse(rowElements[0]));
 
                     data[row.index, 0] = float.Parse(rowElements[1]);

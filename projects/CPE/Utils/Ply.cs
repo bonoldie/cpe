@@ -1,12 +1,8 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Numerics;
 using System.Text.RegularExpressions;
 using MathNet.Numerics.LinearAlgebra;
-using MathNet.Numerics.LinearAlgebra.Double;
-using MathNet.Numerics.Providers.LinearAlgebra;
-using NLog.LayoutRenderers;
 
 namespace CPE.Utils
 {
@@ -55,7 +51,7 @@ namespace CPE.Utils
             };  
 
           
-            string[] Rows = Data.Split("\n", StringSplitOptions.RemoveEmptyEntries);
+            string[] Rows = Data.Split(Environment.NewLine, StringSplitOptions.RemoveEmptyEntries);
 
               foreach(var Property in Properties) {
                 if(Property.pType == PropertyType.Double) {
