@@ -23,8 +23,6 @@ public class CPE_Tests
     {
         Camera cam = new Camera();
 
-
-
         cam.LoadXMPFromFile("xmp/_SAM1020.xmp");
 
         Assert.True(cam.XMPFile.Calibration.Lense == 25, "XMP calibration(lense) parsing not working");
@@ -43,6 +41,7 @@ public class CPE_Tests
 
         var x = ply.GetDoubleVector("x");
         var r = ply.GetUCharVector("red");
+
 
         Assert.True(ply.Header.Properties.Count == 6, "Header parsing error(properties)");
         Assert.True(ply.Header.Properties.FindIndex(prop => prop.PType == PropertyType.Unknown) < 0, "Unkown properties in header");

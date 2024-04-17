@@ -15,6 +15,7 @@
   </ItemGroup>
 
    <ItemGroup>
+     <PackageReference Include="Aspose.3D" Version="24.3.0" />
      <PackageReference Include="MathNet.Numerics" Version="5.0.0" />
      <PackageReference Include="MathNet.Numerics.Data.Matlab" Version="5.0.0" />
      <PackageReference Include="MathNet.Numerics.Data.Text" Version="5.0.0" />

@@ -26,7 +26,6 @@ namespace CPE.Zephyr
 
             ply = Ply.Parse(File.ReadAllText(_PlyFilePath));
         }
-
         // TODO: overload LoadPlyFromFile function with StreamReader
     }
 }

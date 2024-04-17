@@ -1,12 +1,7 @@
 using System;
-using System.Drawing;
-using System.Linq;
 using CPE.Utils;
-using MathNet.Numerics;
-using MathNet.Numerics.Distributions;
 using MathNet.Numerics.LinearAlgebra;
-using MathNet.Numerics.LinearAlgebra.Factorization;
-using MathNet.Numerics.LinearAlgebra.Storage;
+
 
 namespace CPE.CV
 {
@@ -16,7 +11,7 @@ namespace CPE.CV
         Fiore
     }
 
-    public struct Pose
+    public struct CameraPose
     {
         public Matrix<double> Rotation;
         public MathNet.Numerics.LinearAlgebra.Vector<double> Translation;
@@ -32,7 +27,7 @@ namespace CPE.CV
 
         }
 
-        public Pose EstimatePose(Matrix<double> Points2D, Matrix<double> Points3D, Matrix<double> K)
+        public CameraPose EstimatePose(Matrix<double> Points2D, Matrix<double> Points3D, Matrix<double> K)
         {
             // Svd(Points2D);
 
@@ -124,7 +119,7 @@ namespace CPE.CV
 
             var  TPos = ((1/s) * XMean) - (RPos * Points3DMean); 
 
-            return new Pose(){Rotation=RPos, Translation=TPos, Scale=s};        
+            return new CameraPose(){Rotation=RPos, Translation=TPos, Scale=s};        
         }
     }
 
